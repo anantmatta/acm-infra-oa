@@ -18,7 +18,7 @@ Create an API route `GET /api/v1/events` to list all events in the database. For
 
 #### Response Body
 
-```json
+```jsonc
 [
     {
         "event_id": "string",              // Event identifier
@@ -34,7 +34,7 @@ Create an API route `GET /api/v1/events` to list all events in the database. For
 
 If the server encounters an error reading the data, it should return the following (with HTTP Status Code 500):
 
-```json
+```jsonc
 {
     "error": "Could not read data. Please try again."
 }
@@ -48,7 +48,7 @@ Create an API route `POST /api/v1/events` to add an event to the database.
 
 It should accept a body in the following form:
 
-```json
+```jsonc
 {
     "event_id": "string",            // Unique identifier for the event (required)
     "event_description": "string",   // Description of the event (required)
@@ -65,7 +65,7 @@ You should use a library such as `pydantic` to validate that the input conforms 
 
 When an event is successfully created, return a response that confirms the event details  (with HTTP Status Code 201):
 
-```json
+```jsonc
 {
     "event_id": "string",
     "event_description": "string",
@@ -78,7 +78,7 @@ When an event is successfully created, return a response that confirms the event
 
 If the server encounters an error writing the data, it should return the following (with HTTP Status Code 500):
 
-```json
+```jsonc
 {
     "error": "Could not write data. Please check your request body."
 }
@@ -108,7 +108,7 @@ Note that you may not sell more tickets than are available for this event, even 
 
 #### Request Body
 
-```json
+```jsonc
 {
   "prices": [number, number, number, ...]   // Array of prices people are willing to pay (required)
 }
@@ -118,7 +118,7 @@ Note that you may not sell more tickets than are available for this event, even 
 
 When the profit is successfully computed, return the data (with HTTP status 200):
 
-```json
+```jsonc
 {
     "optimal_price": "number",    // The optimal price to set for maximum profit. if it is not possible to sell any tickets, this should be -1.
     "tickets_sold": "integer",    // The number of tickets sold at this optimal price (or 0 if tickets cannot be sold).
@@ -128,7 +128,7 @@ When the profit is successfully computed, return the data (with HTTP status 200)
 
 If the server encounters an error computing the data, it should return the following (with HTTP Status Code 500):
 
-```json
+```jsonc
 {
     "error": "Could not compute data. Please check your request body."
 }
