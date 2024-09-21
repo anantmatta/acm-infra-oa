@@ -142,7 +142,7 @@ We have given you a SQLite database, as well as a few helper function structures
 
 You must have Python >= 3.10 installed to run this application. If you don't please install it now. 
 
-First, run `make install` to install the dependencies for this applications.
+First, run `make install` to install the dependencies for this application.
 
 Next, run `make local` to run your API server locally. You can then use tools like Postman to make queries to your API server. You can also open `http://localhost:8000` in your web browser to make sure the application is running.
 
@@ -164,11 +164,12 @@ We will review your code manually and with different data: do not attempt to gam
 
 You may only submit your `server.py` file! All other files will not be graded. We will use our copies of all other files.
 
-Submit your `server.py` file [here](https://forms.gle/4Z1Gas4xvaMFznhU8).
+Please submit your code code to PrairieLearn, under the course "ACM 101: ACM@UIUC Infrastructure Committee, Fall 2024". You will have to enroll in the course at https://us.prairielearn.com/pl/enroll.
+
+There, you should see the assignment "Infra Take-Home Assessment". Upload your code there. You only have one attempt (run testing on your local machine). 
 
 ## Policy on LLMs
 You may use any LLM of your choosing (ChatGPT, Claude, Copilot, etc.) provided you follow these guidelines:
 
 1. You must provide a report of the entire conversation you had with the LLM (ChatGPT link, screenshots, etc.) with your submission.
 2. The majority of the code must be yours; do not lift significant portions of the code from the LLM!
-
